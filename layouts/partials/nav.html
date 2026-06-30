@@ -23,6 +23,13 @@
             <a class="nav-link" href="/contact">{{ i18n "contact" }}</a>
           </li>
       {{ end }}
+      {{ if .Site.Params.customSections }}
+        {{ range .Site.Params.customSections }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
+          </li>
+          {{ end }}
+      {{ end }}
     </ul>
   </div>
 </nav>
